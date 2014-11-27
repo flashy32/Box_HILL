@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
   
+  resources :events
+  
   match "/Home" => "box_hill#Home", via: :get
   
   match "/news" => "box_hill#News", via: :get
   
   match "/what_we_do" => "box_hill#what_we_do", via: :get
   
-  match "/whats_on" => "box_hill#whats_on", via: :get
+
   
   match "/shop" => "box_hill#shop", via: :get
   

@@ -12,10 +12,6 @@ class BoxHillController < ApplicationController
   @title = "What we do"
   end
 
-  def Whats_on
-    @title = "What's on"
-  end
-
   def Shop
     @title = "Shop"
   end
