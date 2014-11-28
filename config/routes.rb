@@ -1,18 +1,19 @@
 Rails.application.routes.draw do
   
+  devise_for :members
   resources :events
   
   match "/Home" => "box_hill#Home", via: :get
   
   match "/news" => "box_hill#News", via: :get
   
-  match "/what_we_do" => "box_hill#what_we_do", via: :get
+  match "/what_we_do" => "box_hill#What_we_do", via: :get
   
 
   
-  match "/shop" => "box_hill#shop", via: :get
+  match "/shop" => "box_hill#Shop", via: :get
   
-  match "/contact" => "box_hill#contact", via: :get
+  match "/contact" => "box_hill#Contact", via: :get
   
   root 'box_hill#Home'
 

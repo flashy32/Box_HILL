@@ -1,3 +1,12 @@
 <header>
+    <nav id = "sign_in">
+    <%if member_signed_in? %>
+    signed in as <%=current_member.email%>:
+    <%=link_to"sign out", destroy_member_session_path, :method => :delete %>
+    <%else %>
+    <%= link_to "sign up" , new_member_registration_path %> or
+    <%= link_to "sign in", new_member_session_path %>
+<% end %>
+  </nav>
   <h1>Friends of Box Hill</h1>
 </header>
